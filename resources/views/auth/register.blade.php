@@ -2,101 +2,52 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row">
+        <div class="col m8 offset-m2 s12">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-content">
+                    <span class="card-title">{{ __('Register') }}</span>
+                    <div class="row">
+                        <form class="col s12" method="POST" action="{{ route('register') }}">
+                            @csrf
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="first-name" type="text" class="validate" name="first-name" value="{{ old('first-name') }}" maxlength="35" required autofocus>
+                                    <label for="first-name" data-error="Rellene este campo." data-success="Campo validado.">Nombre</label>
+                                </div>
+                                
+                                <div class="input-field col s12">
+                                    <input id="last-name" type="text" class="validate" name="last-name" value="{{ old('last-name') }}" maxlength="35" required>
+                                    <label for="last-name" data-error="Rellene este campo." data-success="Campo validado.">Apellidos</label>
+                                </div>
 
-                        <div class="form-group row">
-                            <label for="first-name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}" maxlength="35" required>
+                                    <label for="email" data-error="Verifique este campo." data-success="Campo validado.">Email</label>
+                                </div>
 
-                            <div class="col-md-6">
-                                <input id="first-name" type="text" class="form-control{{ $errors->has('first-name') ? ' is-invalid' : '' }}" name="first-name" value="{{ old('first-name') }}" required autofocus>
+                                <div class="input-field col s12">
+                                    <input id="phone" type="tel" class="validate" name="phone" value="{{ old('phone') }}" pattern=".{10,10}" maxlength="10" required>
+                                    <label for="phone" data-error="Verifique este campo." data-success="Campo validado.">Teléfono</label>
+                                </div>
 
-                                @if ($errors->has('first-name'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('first-name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" class="validate" name="password" pattern=".{6,}" required>
+                                    <label for="password" data-error="Verifique este campo." data-success="Campo validado.">Contraseña</label>
+                                </div>
 
-                        <div class="form-group row">
-                            <label for="last-name" class="col-md-4 col-form-label text-md-right">{{ __('Apellidos') }}</label>
+                                <div class="input-field col s12">
+                                    <input id="password-confirm" type="password" class="validate" name="password_confirmation" pattern=".{6,}" required autofocus>
+                                    <label for="password-confirm" data-error="Verifique este campo." data-success="Campo validado.">Confirma tu contraseña</label>
+                                </div>
 
-                            <div class="col-md-6">
-                                <input id="last-name" type="text" class="form-control{{ $errors->has('last-name') ? ' is-invalid' : '' }}" name="last-name" value="{{ old('last-name') }}" required>
-
-                                @if ($errors->has('last-name'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('last-name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Teléfono') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="phone" type="tel" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required>
-
-                                @if ($errors->has('phone'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirma tu contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                        {{ __('Register') }}
                                 </button>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

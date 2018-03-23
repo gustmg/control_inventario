@@ -34,23 +34,7 @@
                             <a href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @else
-                        <!-- <li>
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                 <span class="caret">{{ Auth::user()->UserFirstName }}</span>
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li> -->
+                        
                         <li>
                             <a class="dropdown-button" href="#!" data-activates="dropdown1">{{ Auth::user()->UserFirstName }}<i class="material-icons right">arrow_drop_down</i></a>
                         </li>
@@ -74,9 +58,7 @@
             </li>
         </ul>
 
-       
-
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
@@ -87,6 +69,12 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(".button-collapse").sideNav();
+            @if ($errors->has('email'))
+                Materialize.toast('{{ $errors->first('email') }}', 2000);
+            @endif
+            @if ($errors->has('password'))
+                Materialize.toast('{{ $errors->first('password') }}', 2000);
+            @endif
         });
     </script>
 </body>
