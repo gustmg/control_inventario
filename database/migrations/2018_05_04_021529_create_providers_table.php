@@ -25,7 +25,7 @@ class CreateProvidersTable extends Migration
         });
 
         Schema::table('providers', function (Blueprint $table){
-            $table->foreign('provider_id')->references('provider_id')->on('providers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('company_id')->references('company_id')->on('companies')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
