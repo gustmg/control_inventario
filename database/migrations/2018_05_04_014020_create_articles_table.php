@@ -16,9 +16,9 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('article_id');
             $table->string('article_name');
-            $table->string('article_description');
-            $table->string('article_internal_code');
-            $table->string('article_part_number');
+            $table->string('article_description')->nullable();
+            $table->string('article_internal_code')->nullable();
+            $table->string('article_part_number')->nullable();
             $table->float('article_price',5,2);
             $table->integer('company_id')->unsigned();
             $table->integer('article_category_id')->unsigned();

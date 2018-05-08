@@ -23,3 +23,5 @@ Route::resource('users','UserController');
 Route::resource('branch_offices','BranchOfficeController');
 Route::resource('warehouses', 'WarehouseController');
 Route::resource('services', 'ServiceController');
+Route::resource('article_categories', 'ArticleCategoryController');
+Route::resource('raw_material_categories', 'RawMaterialCategoryController');

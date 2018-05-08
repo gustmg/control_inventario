@@ -16,9 +16,9 @@ class CreateRawMaterialsTable extends Migration
         Schema::create('raw_materials', function (Blueprint $table) {
             $table->increments('raw_material_id');
             $table->string('raw_material_name');
-            $table->string('raw_material_description');
-            $table->string('raw_material_internal_code');
-            $table->string('raw_material_part_number');
+            $table->string('raw_material_description')->nullable();
+            $table->string('raw_material_internal_code')->nullable();
+            $table->string('raw_material_part_number')->nullable();
             $table->float('raw_material_price',5,2);
             $table->integer('company_id')->unsigned();
             $table->integer('raw_material_category_id')->unsigned();

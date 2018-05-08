@@ -81,5 +81,4 @@
 			<button id="submit_button" onclick="submitNewBranchOffice();" class="modal-action btn waves-effect submit_button" disabled><b>Registrar</b></button>
 		</div>
 	</div>
-
 @endsection

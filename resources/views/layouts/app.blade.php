@@ -36,8 +36,8 @@
                     <ul class="left">
                         <a href="#" data-activates="slide-out" class="menu hide-on-large-only"><i class="material-icons">menu</i></a>
                     </ul>
-                    <a href="#!" class="breadcrumb hide-on-small-only">Configuración</a>
-                    <a href="#!" class="breadcrumb hide-on-small-only">Usuarios</a>
+                    {{-- <a href="#!" class="breadcrumb hide-on-small-only">Configuración</a>
+                    <a href="#!" class="breadcrumb hide-on-small-only">Usuarios</a> --}}
 
                     <a class="brand-logo right" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -76,7 +76,7 @@
                 <a class="collapsible-header">Compras<i class="material-icons">shopping_cart</i></a>
                 <div class="collapsible-body">
                     <ul style="background-color:#ddd;">
-                        <li><a href="#!">Artículos</a></li>
+                        <li><a href="{{ route('article_categories.index')}}">Artículos</a></li>
                         <li><a href="#!">Órdenes de Compra</a></li>
                         <li><a href="#!">Proveedores</a></li>
                         <li><a href="#!">Requisiciones de Compra</a></li>
@@ -87,7 +87,7 @@
                 <a class="collapsible-header"><i class="material-icons">business</i>Producción</a>
                 <div class="collapsible-body">
                     <ul style="background-color:#ddd;">
-                        <li><a href="#!">Materias Primas</a></li>
+                        <li><a href="{{ route('raw_material_categories.index')}}">Materias Primas</a></li>
                         <li><a href="#!">Manufactura</a></li>
                     </ul>
                 </div>
@@ -151,6 +151,12 @@
     @endif
     @if(Route::currentRouteName()=='services.index')
         <script src="{{ asset('js/services.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='article_categories.index')
+        <script src="{{ asset('js/article_categories.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='raw_material_categories.index')
+        <script src="{{ asset('js/raw_material_categories.js') }}"></script>
     @endif
     <script type="text/javascript">
         $(document).ready(function(){

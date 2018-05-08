@@ -16,10 +16,10 @@ class CreateProvidersTable extends Migration
         Schema::create('providers', function (Blueprint $table) {
             $table->increments('provider_id');
             $table->string('provider_name');
-            $table->string('provider_rfc');
-            $table->string('provider_address');
-            $table->string('provider_email');
-            $table->string('provider_phone');
+            $table->string('provider_rfc')->nullable();
+            $table->string('provider_address')->nullable();
+            $table->string('provider_email')->nullable();
+            $table->string('provider_phone')->nullable();
             $table->integer('company_id')->unsigned();
             $table->timestamps();
         });
