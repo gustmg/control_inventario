@@ -8,14 +8,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    protected $primaryKey = 'UserId';
+    protected $primaryKey = 'id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'UserFirstName', 'UserLastName', 'email', 'UserPhone', 'UserPassword',
+        'first_name', 'last_name', 'email', 'phone', 'password',
     ];
 
     /**
@@ -24,11 +24,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'UserPassword', 'remember_token',
+        'password', 'remember_token',
     ];
 
     public function getAuthPassword() 
     {
-        return $this->UserPassword; 
+        return $this->password; 
     }
 }

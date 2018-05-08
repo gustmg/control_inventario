@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
-use App\User;
+use App\Warehouse;
 use View;
 
-class UserController extends Controller
+class WarehouseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::all();
-        return View::make('users.index')->with('users', $users);
+        $warehouses=Warehouse::all();
+        return View::make('warehouses.index')->with('warehouses', $warehouses);
     }
 
     /**
@@ -29,7 +29,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData=$request->validate([
+            'warehouse_name' => 'required',
+        ]);
+
+        $warehouse=new Warehouse;
+        $warehouse->warehouse_name=$request->warehouse_name;
+        $warehouse->warehouse_address=$request->warehouse_address;
+        $warehouse->company_id=1;
+        $warehouse->save();
+
+        return Redirect::to('warehouses');
     }
 
     /**
@@ -53,19 +63,16 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData=$request->validate([
-            'first_name' => 'required|string|max:35',
-            'last_name' => 'required|string|max:35',
-            'phone' => 'required|string|max:10',
+            'warehouse_name' => 'required',
         ]);
 
-        $user=User::find($id);
-        $user->first_name=$request->first_name;
-        $user->last_name=$request->last_name;
-        $user->phone=$request->phone;
-        //$user->password=Hass::make($request->password);
-        $user->save();
-
-        return Redirect::to('users');
+        $warehouse=Warehouse::find($id);
+        $warehouse->warehouse_name=$request->warehouse_name;
+        $warehouse->warehouse_address=$request->warehouse_address;
+        $warehouse->company_id=1;
+        $warehouse->save();
+        
+        return Redirect::to('warehouses');
     }
 
     /**
@@ -76,8 +83,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user=User::find($id);
-        $user->delete();
-        return Redirect::to('users');
+        return Redirect::to('warehouses');
     }
 }

@@ -17,8 +17,8 @@ class CreateBranchOfficesTable extends Migration
             $table->increments('branch_office_id');
             $table->string('branch_office_name');
             $table->string('branch_office_address');
-            $table->string('branch_office_email');
-            $table->string('branch_office_phone');
+            $table->string('branch_office_email')->nullable();
+            $table->string('branch_office_phone')->nullable();
             $table->integer('company_id')->unsigned();
             $table->timestamps();
         });

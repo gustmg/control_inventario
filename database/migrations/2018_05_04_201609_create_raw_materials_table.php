@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesTable extends Migration
+class CreateRawMaterialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,22 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
-            $table->increments('article_id');
-            $table->string('article_name');
-            $table->string('article_description');
-            $table->string('article_internal_code');
-            $table->string('article_part_number');
-            $table->float('article_price',5,2);
+        Schema::create('raw_materials', function (Blueprint $table) {
+            $table->increments('raw_material_id');
+            $table->string('raw_material_name');
+            $table->string('raw_material_description');
+            $table->string('raw_material_internal_code');
+            $table->string('raw_material_part_number');
+            $table->float('raw_material_price',5,2);
             $table->integer('company_id')->unsigned();
-            $table->integer('article_category_id')->unsigned();
+            $table->integer('raw_material_category_id')->unsigned();
             $table->integer('measurement_unit_id')->unsigned()->nullable();
             $table->timestamps();
         });
 
-        Schema::table('articles', function(Blueprint $table){
+        Schema::table('raw_materials', function(Blueprint $table){
             $table->foreign('company_id')->references('company_id')->on('companies')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('article_category_id')->references('article_category_id')->on('article_categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('raw_material_category_id')->references('raw_material_category_id')->on('raw_material_categories')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('measurement_unit_id')->references('measurement_unit_id')->on('measurement_units')->onDelete('set null')->onUpdate('set null');
         });
     }
@@ -40,6 +40,6 @@ class CreateArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('raw_materials');
     }
 }

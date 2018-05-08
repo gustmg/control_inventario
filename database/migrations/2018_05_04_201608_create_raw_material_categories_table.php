@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateServicesTable extends Migration
+class CreateRawMaterialCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->increments('service_id');
-            $table->string('service_name');
-            $table->string('service_description')->nullable();
-            $table->string('service_internal_code')->nullable();
-            $table->float('service_price',5,2);
+        Schema::create('raw_material_categories', function (Blueprint $table) {
+            $table->increments('raw_material_category_id');
+            $table->string('raw_material_category_name');
             $table->integer('company_id')->unsigned();
             $table->timestamps();
         });
 
-        Schema::table('services', function (Blueprint $table){
+        Schema::table('raw_material_categories', function (Blueprint $table){
             $table->foreign('company_id')->references('company_id')->on('companies')->onDelete('cascade')->onUpdate('cascade');
         });
     }
@@ -35,6 +32,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('raw_material_categories');
     }
 }

@@ -12,13 +12,13 @@
                             @csrf
                             <div class="row">
                                 <div class="input-field col s5">
-                                    <input id="first-name" type="text" class="validate" name="first-name" value="{{ old('first-name') }}" maxlength="35" required autofocus>
-                                    <label for="first-name" data-error="Rellene este campo." data-success="Campo validado.">Nombre</label>
+                                    <input id="first_name" type="text" class="validate" name="first_name" value="{{ old('first-name') }}" maxlength="35" required autofocus>
+                                    <label for="first_name" data-error="Rellene este campo." data-success="Campo validado.">Nombre</label>
                                 </div>
                                 
                                 <div class="input-field col s7">
-                                    <input id="last-name" type="text" class="validate" name="last-name" value="{{ old('last-name') }}" maxlength="35" required>
-                                    <label for="last-name" data-error="Rellene este campo." data-success="Campo validado.">Apellidos</label>
+                                    <input id="last_name" type="text" class="validate" name="last_name" value="{{ old('last-name') }}" maxlength="35" required>
+                                    <label for="last_name" data-error="Rellene este campo." data-success="Campo validado.">Apellidos</label>
                                 </div>
 
                                 <div class="input-field col s7">

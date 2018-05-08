@@ -18,8 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/init', 'HomeController@init')->name('init');
-
-Route::get('/company','CompanyController@index')->name('company');
-Route::get('/users','UserController@index')->name('users');
+Route::resource('company','CompanyController');
+Route::resource('users','UserController');
+Route::resource('branch_offices','BranchOfficeController');
+Route::resource('warehouses', 'WarehouseController');
+Route::resource('services', 'ServiceController');

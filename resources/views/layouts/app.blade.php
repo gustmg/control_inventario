@@ -52,13 +52,25 @@
         <ul id="slide-out" class="collapsible side-nav fixed" data-collapsible="accordion" style="border-top:0;border-left:0;border-right: 0;width: 275px;">
             <div class="card blue-grey darken-3" style="margin-top: 0;margin-bottom: 0;border-radius: 0;">
                 <div class="card-content white-text">
-                    <h5>{{Auth::user()->UserFirstName}}</h5>
+                    <h5>{{Auth::user()->first_name}}</h5>
                     <h6>Perfil</h6>
                     <a href="{{route('home')}}" class="btn-floating tooltipped halfway-fab waves-effect waves-light blue darken-3 no-padding" data-position="bottom" data-delay="50" data-tooltip="Ir a la página principal"><i class="material-icons">home</i></a>
                 </div>
             </div>
             <li class="no-padding" style="color: black;margin-left: 16px;">
                 Módulos
+            </li>
+            <li id="company-menu" class="no-padding">
+                <a class="collapsible-header">Mi empresa<i class="material-icons">business</i></a>
+                <div class="collapsible-body">
+                    <ul style="background-color:#ddd;">
+                        <li><a href="{{ route('company.index') }}">Empresa</a></li>
+                        <li><a href="{{ route('users.index')}}">Usuarios</a></li>
+                        <li><a href="{{ route('branch_offices.index')}}">Tiendas</a></li>
+                        <li><a href="{{ route('warehouses.index')}}">Almacenes</a></li>
+                        <li><a href="{{ route('services.index')}}">Servicios</a></li>
+                    </ul>
+                </div>
             </li>
             <li id="purchases-menu" class="no-padding">
                 <a class="collapsible-header">Compras<i class="material-icons">shopping_cart</i></a>
@@ -84,6 +96,7 @@
                 <a class="collapsible-header">Ventas<i class="material-icons">local_offer</i></a>
                 <div class="collapsible-body">
                     <ul style="background-color:#ddd;">
+                        <li><a href="#!">Servicios</a></li>
                         <li><a href="#!">Clientes</a></li>
                         <li><a href="#!">Punto de Venta</a></li>
                         <li><a href="#!">Ordenes de Venta</a></li>
@@ -101,16 +114,6 @@
                 </div>
             </li>
             <div class="divider"></div>
-            <li id="config-menu" class="no-padding">
-                <a class="collapsible-header">Configuración<i class="material-icons">settings</i></a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('company')}}">Empresa</a></li>
-                        <li><a href="{{route('users')}}">Usuarios</a></li>
-                        <li><a href="#!">Perfiles</a></li>
-                    </ul>
-                </div>
-            </li>
             <li class="no-padding">
                 <a class="collapsible-header">Ayuda<i class="material-icons">help</i></a>
             </li>
@@ -125,40 +128,58 @@
             </li>
         </ul>
         @endauth
-
         <main>
             @yield('content')
+            
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/materialize.js') }}"></script>
+    @if(Route::currentRouteName()=='company.index')
+        <script src="{{ asset('js/company.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='users.index')
+        <script src="{{ asset('js/users.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='branch_offices.index')
+        <script src="{{ asset('js/branch_offices.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='warehouses.index')
+        <script src="{{ asset('js/warehouses.js') }}"></script>
+    @endif
+    @if(Route::currentRouteName()=='services.index')
+        <script src="{{ asset('js/services.js') }}"></script>
+    @endif
     <script type="text/javascript">
         $(document).ready(function(){
+            //Init for Materialize objects
             $(".menu").sideNav();
+            $('.modal').modal();
+            $('.newCompanyModal').modal({dismissible:false,});
+            $('.newCompanyModal').modal('open');
+            $('.carousel').carousel();
 
+            //Verify credentials of Login
             @if ($errors->has('email'))
                 Materialize.toast('{{ $errors->first('email') }}', 2000);
             @endif
             @if ($errors->has('password'))
                 Materialize.toast('{{ $errors->first('password') }}', 2000);
             @endif
-            $('.carousel').carousel();
 
-            $('.modal').modal();            
-
+                      
+            //Drawe Menu Toggle effects
             var purchases_menu= document.getElementById("purchases-menu");
             var production_menu= document.getElementById("production-menu");
             var sales_menu= document.getElementById("sales-menu");
             var inventory_menu= document.getElementById("inventory-menu");
-            var config_menu= document.getElementById("config-menu");
 
             purchases_menu.addEventListener("click", setActiveMenuColor, false);
             production_menu.addEventListener("click", setActiveMenuColor, false);
             sales_menu.addEventListener("click", setActiveMenuColor, false);
             inventory_menu.addEventListener("click", setActiveMenuColor, false);
-            config_menu.addEventListener("click", setActiveMenuColor, false);
 
             $('.btn-floating.white.z-depth-0').mouseover(function(event) {
                 //$(this).find('i').fadeTo(100, 1);
@@ -168,7 +189,20 @@
                 //$(this).find('i').fadeTo(100, .5);
                 $(this).find('i').css('opacity','.5');
             });
+
+            //Validations for Company Registration Modal Form
+            $('.company_name').on('blur', function () {
+                if (!$('.company_name').hasClass('invalid')) {
+                    $('.submit_button').attr('disabled', false);
+                } else {
+                    $('.submit_button').attr('disabled', true);
+                }
+            });
         });
+
+        function submitNewCompany() {
+            $('#newCompanyForm').submit();
+        }
 
         function setActiveMenuColor(){
             if($('a i',this).hasClass('blue-text darken-1')){
