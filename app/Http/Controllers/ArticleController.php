@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Article;
 use App\ArticleCategory;
+use App\MeasurementUnit;
 use View;
 
 class ArticleController extends Controller
@@ -20,7 +21,8 @@ class ArticleController extends Controller
     {
         $articles = Article::where('article_category_id', $category_id)->get();
         $article_category = ArticleCategory::find($category_id);
-        return View::make('articles.index',['articles' => $articles, 'article_category' => $article_category]);
+        $measurement_units = MeasurementUnit::all();
+        return View::make('articles.index',['articles' => $articles, 'article_category' => $article_category, 'measurement_units' => $measurement_units]);
     }
 
     /**
@@ -47,7 +49,7 @@ class ArticleController extends Controller
         $article->measurement_unit_id=$request->measurement_unit_id;
         $article->save();
 
-        return Redirect::to('articles');
+        return 'Agregado';
     }
 
     /**

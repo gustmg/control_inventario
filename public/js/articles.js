@@ -1,9 +1,10 @@
 $('.newArticleModal').modal();
 $('.updateArticleModal').modal();
 $('.deleteArticleModal').modal();
+$('select').material_select();
 
 function validateForm(){
-	if (!$('.article_name').hasClass('invalid')	&& !$('.article_price').hasClass('invalid')) {
+	if ($('.article_name').hasClass('valid') && $('.article_price').hasClass('valid')) {
 		$('.submit_button').attr('disabled', false);
 	} else {
 		$('.submit_button').attr('disabled', true);

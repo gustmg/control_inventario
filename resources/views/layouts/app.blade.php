@@ -158,7 +158,7 @@
     @if(Route::currentRouteName()=='raw_material_categories.index')
         <script src="{{ asset('js/raw_material_categories.js') }}"></script>
     @endif
-    @if(Route::currentRouteName()=='articles')
+    @if(Route::currentRouteName()=='getArticles')
         <script src="{{ asset('js/articles.js') }}"></script>
     @endif
     <script type="text/javascript">

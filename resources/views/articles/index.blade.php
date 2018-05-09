@@ -40,7 +40,7 @@
 	<button style="position:fixed;bottom: 24px;right: 24px;" class="btn-floating btn-large waves-effect waves-light modal-trigger" href="#newArticleModal">
 		<i class="material-icons">add</i>
 	</button>
-	<div id="newArticleModal" class="modal newArticleModal modal-fixed-footer">
+	<div id="newArticleModal" class="modal newArticleModal">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s12">
@@ -49,27 +49,35 @@
 				<form id="newArticleForm" class="col s12 no-padding" method="POST" action="articles">
 					{{ csrf_field() }}
 					<div class="row" style="margin-bottom: 10px;">
-						<div class="col s12 grey-text text-darken-2"><b>Información general</b></div>
 						<div class="input-field col s12 m8">
 							<input id="article_name" name="article_name" type="text" class="validate article_name" onblur="validateForm();" required>
 							<label for="article_name" data-error="Verifique este campo" data-success="Campo validado">Nombre del artículo *</label>
+				        </div>
+				        <div class="input-field col s12 m4">
+							<select name="measurement_unit_id">
+								@foreach($measurement_units as $key => $measurement_unit)
+									<option value="{{$measurement_unit->measurement_unit_id}}">{{$measurement_unit->measurement_unit_name}}</option>
+								@endforeach
+							</select>
+							<label>Unidad de Medida</label>
 				        </div>
 				        <div class="input-field col s12 m12">
 							<input id="article_description" name="article_description" type="text" class="article_description">
 							<label for="article_description" data-error="Verifique este campo" data-success="Campo validado">Descripción del artículo</label>
 				        </div>
-				        <div class="input-field col s12 m6">
+				        <div class="input-field col s12 m4">
 							<input id="article_internal_code" name="article_internal_code" type="text" class="article_internal_code">
 							<label for="article_internal_code" data-error="Verifique este campo" data-success="Campo validado">Código interno del artículo</label>
 				        </div>
-				        <div class="input-field col s12 m6">
+				        <div class="input-field col s12 m4">
 							<input id="article_part_number" name="article_part_number" type="text" class="article_part_number">
 							<label for="article_part_number" data-error="Verifique este campo" data-success="Campo validado">Número de parte del artículo</label>
 				        </div>
-				        <div class="input-field col s12 m6">
-							<input id="article_price" name="article_price" type="text" class="validate article_price" onblur="validateForm();" required>
-							<label for="article_price" data-error="Verifique este campo" data-success="Campo validado">Nombre del artículo *</label>
+				        <div class="input-field col s12 m4">
+							<input id="article_price" name="article_price" type="number" class="validate article_price" onblur="validateForm();" required>
+							<label for="article_price" data-error="Verifique este campo" data-success="Campo validado">Precio del artículo *</label>
 				        </div>
+				        <input id="article_cateory_id" name="article_cateory_id" type="hidden" value="{{$article_category->article_category_id}}">
 					</div>
 				</form>
 			</div>

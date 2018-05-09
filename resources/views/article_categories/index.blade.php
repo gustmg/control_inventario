@@ -19,7 +19,7 @@
 					<div class="card hoverable">
 						<div class="card-content">
 							<h5 class="truncate"><b>{{ $article_category->article_category_name}}</b></h5>
-							<a href="{{ route('articles', ['category_id' => $article_category->article_category_id])}}">Ver artículos</a>
+							<a href="{{ route('getArticles', ['category_id' => $article_category->article_category_id])}}">Ver artículos</a>
 							<div class="right-align">
 								<a href="#deleteArticleCategorModal{{$article_category->article_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Eliminar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">delete</i>
