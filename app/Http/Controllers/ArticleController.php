@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Article;
+use App\ArticleCategory;
 use View;
 
 class ArticleController extends Controller
@@ -15,10 +16,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category_id)
     {
-        $articles = Article::all();
-        return View::make('articles.index')->with('articles', $articles);
+        $articles = Article::where('article_category_id', $category_id)->get();
+        $article_category = ArticleCategory::find($category_id);
+        return View::make('articles.index',['articles' => $articles, 'article_category' => $article_category]);
     }
 
     /**

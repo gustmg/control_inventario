@@ -158,6 +158,9 @@
     @if(Route::currentRouteName()=='raw_material_categories.index')
         <script src="{{ asset('js/raw_material_categories.js') }}"></script>
     @endif
+    @if(Route::currentRouteName()=='articles')
+        <script src="{{ asset('js/articles.js') }}"></script>
+    @endif
     <script type="text/javascript">
         $(document).ready(function(){
             //Init for Materialize objects

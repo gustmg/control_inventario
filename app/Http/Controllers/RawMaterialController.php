@@ -15,9 +15,9 @@ class RawMaterialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category_id)
     {
-        $raw_materials = RawMaterial::all();
+        $raw_materials = RawMaterial::where('raw_material_category_id', $category_id)->get();
         return View::make('raw_materials.index')->with('raw_materials', $raw_materials);
     }
 

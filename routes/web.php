@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('article_categories/{category_id}', 'ArticleController@index')->name('articles');
+Route::get('raw_material_categories/{category_id}', 'RawMaterialController@index')->name('raw_materials');
 Route::resource('company','CompanyController');
 Route::resource('users','UserController');
 Route::resource('branch_offices','BranchOfficeController');
@@ -25,3 +27,4 @@ Route::resource('warehouses', 'WarehouseController');
 Route::resource('services', 'ServiceController');
 Route::resource('article_categories', 'ArticleCategoryController');
 Route::resource('raw_material_categories', 'RawMaterialCategoryController');
+Route::resource('articles', 'ArticleController');

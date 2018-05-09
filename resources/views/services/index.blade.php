@@ -39,7 +39,7 @@
 	<button style="position:fixed;bottom: 24px;right: 24px;" class="btn-floating btn-large waves-effect waves-light modal-trigger" href="#newServiceModal">
 		<i class="material-icons">add</i>
 	</button>
-	<div id="newServiceModal" class="modal newServiceModal">
+	<div d="newServiceModal" class="modal newServiceModal">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s12">
@@ -74,5 +74,4 @@
 			<button id="submit_button" onclick="submitNewService();" class="modal-action btn waves-effect submit_button" disabled><b>Registrar</b></button>
 		</div>
 	</div>
-
 @endsection
