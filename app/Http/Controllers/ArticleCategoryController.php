@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use App\Article;
 use App\ArticleCategory;
+use App\MeasurementUnit;
 use View;
 
 class ArticleCategoryController extends Controller
@@ -47,9 +49,13 @@ class ArticleCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($category_id)
     {
-        //
+        $articles = Article::where('article_category_id', $category_id)->get();
+        $article_category = ArticleCategory::find($category_id);
+        $measurement_units = MeasurementUnit::all();
+        
+        return View::make('articles.index',['articles' => $articles, 'article_category' => $article_category, 'measurement_units' => $measurement_units]);
     }
 
     /**

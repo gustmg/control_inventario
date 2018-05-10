@@ -19,7 +19,7 @@
 					<div class="card hoverable">
 						<div class="card-content">
 							<h5 class="truncate"><b>{{ $raw_material_category->raw_material_category_name}}</b></h5>
-							<a href="#">Ver materias primas</a>
+							<a href="/raw_material_categories/{{$raw_material_category->raw_material_category_id}}">Ver materias primas</a>
 							<div class="right-align">
 								<a href="#deleteRawMaterialCategorModal{{$raw_material_category->raw_material_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Eliminar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">delete</i>

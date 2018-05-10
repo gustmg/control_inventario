@@ -4,40 +4,24 @@
 		"selected_items":
 		[
 			[
-				"measu",
-				"measurement_unit_id"
-			],
-			[
-				"article_categ",
-				"article_category_name"
-			],
-			[
-				"c",
-				"categoría"
-			],
-			[
-				"raw_",
-				"raw_materials"
-			],
-			[
-				"raw_material_",
-				"raw_material_categories"
-			],
-			[
-				"req",
-				"request"
-			],
-			[
-				"raw_materia",
-				"raw_material_category_name"
+				"new",
+				"newServiceForm"
 			],
 			[
 				"article",
-				"article_category"
+				"article_category_name"
 			],
 			[
-				"email",
-				"email"
+				"article_category_",
+				"article_category_name"
+			],
+			[
+				"artic",
+				"article_category_id"
+			],
+			[
+				"art_",
+				"article_category_id"
 			],
 			[
 				"warehouse",
@@ -514,47 +498,27 @@
 			[
 				"relo",
 				"reloadCuentasBancarias"
+			],
+			[
+				"num",
+				"numero_cheque"
+			],
+			[
+				"col",
+				"columnaOrigen"
+			],
+			[
+				"sele",
+				"selectMetodo"
+			],
+			[
+				"va",
+				"val"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "routes/web.php",
-			"settings":
-			{
-				"buffer_size": 1182,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/articles/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 4554,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/layouts/app.blade.php",
-			"settings":
-			{
-				"buffer_size": 11070,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/article_categories/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 3901,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -568,7 +532,7 @@
 		"selected_items":
 		[
 			[
-				"insta",
+				"ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -577,6 +541,10 @@
 			],
 			[
 				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -641,70 +609,103 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Laravel/control_inventario",
-		"/C/Laravel/control_inventario/public",
-		"/C/Laravel/control_inventario/public/js",
-		"/C/Laravel/control_inventario/routes"
+		"/C/Laravel/control_inventario"
 	],
 	"file_history":
 	[
-		"/C/Laravel/control_inventario/public/js/articles.js",
-		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleController.php",
-		"/C/Laravel/control_inventario/resources/views/branch_offices/index.blade.php",
-		"/C/Laravel/control_inventario/routes/web.php",
-		"/C/Laravel/control_inventario/app/Article.php",
-		"/C/Laravel/control_inventario/app/MeasurementUnit.php",
-		"/C/Laravel/control_inventario/database/seeds/DatabaseSeeder.php",
-		"/C/Laravel/control_inventario/database/seeds/MeasurementUnitSeeder.php",
+		"/C/Laravel/control_inventario/resources/views/raw_materials/index.blade.php",
 		"/C/Laravel/control_inventario/resources/views/layouts/app.blade.php",
+		"/C/Laravel/control_inventario/public/js/raw_materials.js",
+		"/C/Laravel/control_inventario/public/js/articles.js",
+		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleCategoryController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialCategoryController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleController.php",
+		"/C/Laravel/control_inventario/app/RawMaterialCategory.php",
+		"/C/Laravel/control_inventario/resources/views/articles/index.blade.php",
+		"/C/Laravel/control_inventario/routes/web.php",
 		"/C/Laravel/control_inventario/resources/views/raw_material_categories/index.blade.php",
 		"/C/Laravel/control_inventario/resources/views/article_categories/index.blade.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialCategoryController.php",
-		"/C/Laravel/control_inventario/public/js/raw_material_categories.js",
-		"/C/Laravel/control_inventario/app/RawMaterialCategory.php",
-		"/C/Laravel/control_inventario/app/ArticleCategory.php",
-		"/C/Laravel/control_inventario/public/js/article_categories.js",
-		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleCategoryController.php",
+		"/C/Laravel/control_inventario/public/js/services.js",
+		"/C/Laravel/control_inventario/resources/views/services/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/branch_offices/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/company/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/company.js",
 		"/C/Laravel/control_inventario/resources/views/users/index.blade.php",
-		"/C/Laravel/control_inventario/public/js/branch_offices.js",
-		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialController.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_201609_create_raw_materials_table.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/ServiceController.php",
-		"/C/Laravel/control_inventario/app/RawMaterial.php",
-		"/C/Laravel/control_inventario/app/Warehouse.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/BranchOfficeController.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_201608_create_raw_material_categories_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021748_create_services_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020910_create_article_entries_table.php",
+		"/C/Laravel/control_inventario/public/js/users.js",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_014020_create_articles_table.php",
+		"/C/Laravel/polizer/public/js/accounting_accounts.js",
+		"/C/Laravel/control_inventario/public/js/branch_offices.js",
+		"/C/Laravel/polizer/app/Http/Controllers/ProviderController.php",
+		"/C/Laravel/polizer/resources/views/providers/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/article_categories.js",
+		"/C/Laravel/control_inventario/public/js/raw_material_categories.js",
+		"/C/Laravel/control_inventario/app/Http/Controllers/ServiceController.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021748_create_services_table.php",
+		"/C/Laravel/polizer/resources/views/accounting_accounts/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/warehouses/index.blade.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/WarehouseController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/BranchOfficeController.php",
+		"/C/Laravel/control_inventario/public/js/warehouses.js",
+		"/C/Laravel/control_inventario/app/Warehouse.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013852_create_branch_offices_table.php",
+		"/C/Laravel/control_inventario/resources/views/auth/register.blade.php",
+		"/C/Laravel/polizer/public/js/providers.js",
+		"/C/Laravel/control_inventario/app/Http/Controllers/CompanyController.php",
+		"/C/Laravel/control_inventario/app/BranchOffice.php",
+		"/C/Laravel/control_inventario/resources/views/home.blade.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/UserController.php",
+		"/C/Laravel/control_inventario/public/js/app.js",
+		"/C/Laravel/polizer/app/Http/Controllers/ClientController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/Laravel/polizer/resources/views/layouts/app.blade.php",
+		"/C/Laravel/polizer/resources/views/companies/index.blade.php",
+		"/C/Laravel/polizer/public/js/companies.js",
+		"/C/Laravel/control_inventario/app/Http/Controllers/HomeController.php",
+		"/C/Laravel/control_inventario/resources/views/company/company.blade.php",
+		"/C/Laravel/polizer/app/Http/Controllers/CompanyController.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/Auth/LoginController.php",
+		"/C/Laravel/control_inventario/app/User.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/Auth/ForgotPasswordController.php",
+		"/C/Laravel/control_inventario/public/js/materialize.js",
+		"/C/Laravel/control_inventario/public/css/materialize.css",
+		"/C/Laravel/control_inventario/resources/views/company/newCompanyModal.blade.php",
+		"/C/Laravel/control_inventario/app/Client.php",
+		"/C/Laravel/control_inventario/app/ArticleExit.php",
+		"/C/Laravel/control_inventario/app/ArticleEntry.php",
+		"/C/Laravel/control_inventario/app/ArticleCategory.php",
+		"/C/Laravel/control_inventario/app/Article.php",
+		"/C/Laravel/control_inventario/app/Company.php",
+		"/C/Laravel/control_inventario/app/MeasurementUnit.php",
+		"/C/Laravel/control_inventario/app/Provider.php",
+		"/C/Laravel/control_inventario/app/RawMaterial.php",
+		"/C/Laravel/control_inventario/app/Service.php",
+		"/C/Laravel/control_inventario/app/WarehouseEntry.php",
+		"/C/Laravel/control_inventario/app/WarehouseExit.php",
+		"/C/Laravel/polizer/app/Provider.php",
+		"/C/Laravel/polizer/app/Company.php",
+		"/C/Laravel/polizer/app/AccountingAccount.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/Auth/ResetPasswordController.php",
+		"/C/Laravel/control_inventario/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_201608_create_raw_material_categories_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_201609_create_raw_materials_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013735_create_measurement_units_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_014019_create_article_categories_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013901_create_warehouse_entries_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013900_create_warehouses_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013852_create_branch_offices_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013851_create_providers_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013902_create_warehouse_exits_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013734_create_companies_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013735_create_measurement_units_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013850_create_clients_table.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/CompanyController.php",
-		"/C/Laravel/control_inventario/app/User.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_171424_create_warehouse_exits_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013900_create_warehouses_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020001_create_warehouse_entries_table.php",
-		"/C/Laravel/control_inventario/resources/views/home.blade.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021529_create_providers_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021318_create_branch_office_table.php",
-		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020920_create_article_exits_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020421_create_measurement_units_table.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020615_create_article_categories_table.php",
-		"/C/Users/Usuario/Desktop/mail.php",
-		"/C/Users/Usuario/Desktop/index.html",
-		"/C/Users/Usuario/Desktop/index_tec.html",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020910_create_article_entries_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_020920_create_article_exits_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021318_create_branch_office_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021529_create_providers_table.php",
+		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013850_create_clients_table.php",
 		"/C/Laravel/polizer/database/migrations/2018_04_22_221230_create_companies_table.php",
 		"/C/Laravel/control_inventario/resources/views/users/users.blade.php",
-		"/C/Laravel/control_inventario/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/UserController.php",
 		"/C/Laravel/control_inventario/resources/views/init.blade.php",
-		"/C/Laravel/control_inventario/resources/views/company/company.blade.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/HomeController.php",
 		"/C/Laravel/control_inventario/public/css/extra.css",
 		"/C/xampp/htdocs/polizer/app/site_media/html/cfdi.php",
 		"/C/xampp/htdocs/polizer/app/site_media/html/cfdiIeps.php",
@@ -739,43 +740,7 @@
 		"/C/xampp/htdocs/polizer/app/empresas/empresa_controller.php",
 		"/C/xampp/htdocs/polizer/app/proveedores/proveedorDAO.php",
 		"/C/xampp/htdocs/polizer/app/config/conexion.php",
-		"/C/xampp/htdocs/polizer/app/excel/Classes/PHPExcel/IOFactory.php",
-		"/E/htdocsFebrero2018/dashboard/phpinfo.php",
-		"/C/xampp/htdocs/polizer/index.html",
-		"/C/xampp/htdocs/polizer/app/excel/creaExcel.php",
-		"/C/xampp/htdocs/polizer/site_media/css/polizer.css",
-		"/C/xampp/htdocs/polizer/app/config/excelIeps.php",
-		"/E/Descargas/xmlcombustiblepolizer/CEF3E226-09B3-4C5E-90F2-B9299C74FCCB@0000000000XX0.xml",
-		"/E/Descargas/04/04/ieps/B3F5F586-71BF-489A-B6A8-4A6219782339.xml",
-		"/C/xampp/htdocs/polizer/site_media/css/bootstrap-material-design.css",
-		"/C/xampp/htdocs/polizer/site_media/css/bootstrap.css",
-		"/C/xampp/htdocs/polizer/site_media/css/bootstrap.css.map",
-		"/E/Descargas/UI-Sticky-master/UI-Sticky-master/package.js",
-		"/C/xampp/htdocs/polizer/site_media/css/bootstrap.min.css",
-		"/E/Descargas/ST005S01E23P04CH03-The_screaming_jungle-DVDRip-2Eng-2Eng.srt",
-		"/E/Descargas/04/04/Provision/63D3B4E5-3124-4B6A-95C8-1D2604F754BC.xml",
-		"/E/Descargas/04/04/Provision/5E6AE591-A506-4685-8B06-16728EE74E46.xml",
-		"/E/Descargas/04/04/Provision/352B014D-9608-4D33-A6FF-6B43533A5669.xml",
-		"/C/xampp/htdocs/polizer/app/site_media/html/cfdiDepositos.php",
-		"/E/Descargas/04/04/3.3/3B8332EC-B9BF-4867-935F-55A41781BEF4@0000000000XX0.xml",
-		"/E/Descargas/04/04/3.3/8B57C51E-4E10-4F41-80D8-728EA768F588@0000000000XX0.xml",
-		"/C/xampp/htdocs/polizer/app/config/excel.php",
-		"/E/Descargas/04/04/3.3/prov1.xml",
-		"/E/Descargas/04/04/3.3/prov2.xml",
-		"/C/xampp/htdocs/polizer/app/config/excelIngresos.php",
-		"/C/xampp/htdocs/polizer/app/config/excelDeposito.php",
-		"/E/Descargas/04/04/Facturacion/0A6A4627-49A4-2A40-B224-6B15C833186B@0000000000XX0.XML",
-		"/C/xampp/htdocs/polizer/app/site_media/css/material.min.css",
-		"/C/xampp/htdocs/polizer/app/site_media/css/extra.css",
-		"/C/xampp/htdocs/polizer/app/clientes/cliente_controller.php",
-		"/C/xampp/htdocs/polizer/app/clientes/clienteDAO.php",
-		"/E/Descargas/04/04/Deposito de clientes/PruebaDepositoClientes.xml",
-		"/E/Descargas/04/04/Pago a Proveedor/PolizaPago02.xml",
-		"/E/Descargas/04/04/Pago a Proveedor/PolizaPago03.xml",
-		"/E/Descargas/04/04/Pago a Proveedor/PolizaPago04.xml",
-		"/E/Descargas/04/04/Facturacion/PruebaIngresos1 (1).xml",
-		"/E/Descargas/04/04/Facturacion/PruebaIngresos1 (2).xml",
-		"/E/Descargas/04/04/Facturacion/PruebaIngresos1 (4).xml"
+		"/C/xampp/htdocs/polizer/app/excel/Classes/PHPExcel/IOFactory.php"
 	],
 	"find":
 	{
@@ -793,20 +758,48 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"POST",
-			"newArticleForm",
-			"Article",
 			"article",
 			"Article",
+			"article",
+			"l artículo",
+			"Article",
+			"article",
+			"update",
+			"modal1",
+			"modal",
+			"newservic",
+			"onblur",
+			"users",
+			"servicio",
+			"service",
+			"Service",
+			"_category",
+			"Category",
+			"services",
 			"branch_office",
+			"BranchOffice",
+			"value",
+			"Warehouse",
+			"warehouse",
 			"BranchOffice",
 			"branch_office",
 			"BranchOffice",
-			"alert",
-			"            \t\n",
-			"contacto",
-			"alert-enviado",
-			"enviaCorreo",
+			"branch_office",
+			"provider",
+			"Provider",
+			"provider",
+			"_name",
+			"modal",
+			"updateUserForm",
+			"updateusermodal",
+			"update",
+			"new",
+			"setCompanyData",
+			"modal",
+			"dismissible",
+			"newcompany",
+			"route",
+			"user",
 			"blue"
 		],
 		"highlight": true,
@@ -815,13 +808,32 @@
 		"regex": false,
 		"replace_history":
 		[
-			"RawMaterial",
 			"raw_material",
 			"RawMaterial",
-			"article_category",
-			"ArticleCategory",
-			"article_category",
-			"ArticleCategory"
+			"raw_material",
+			" raw_material",
+			" la materia prima",
+			"RawMaterial",
+			"raw_material",
+			"onkeyup",
+			"aartículo",
+			"article",
+			"Article",
+			"",
+			"articles",
+			"service",
+			"Service",
+			"service",
+			"Service",
+			"service",
+			"Warehouse",
+			"warehouse",
+			"Warehouse",
+			"warehouse",
+			"branch_office",
+			"BranchOffice",
+			"_address",
+			"newCompany"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -832,125 +844,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "routes/web.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/articles/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4554,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2027,
-								2027
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 354.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/views/layouts/app.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7813,
-								7813
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1755.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/article_categories/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3901,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								892,
-								892
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1009,7 +904,7 @@
 	"project": "control-inventario.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":

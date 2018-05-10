@@ -28,7 +28,7 @@
 						@foreach($articles as $key=>$article)
 						<tr>
 							<td class="center">{{$article->article_internal_code}}</td>
-							<td class="truncate tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$article->article_name}}">{{$article->article_name}}</td>
+							<td class="truncate tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$article->article_description}}">{{$article->article_name}}</td>
 							<td class="center tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$article->article_price}}">{{$article->article_price}}</td>
 						</tr>
 						@endforeach
@@ -46,7 +46,7 @@
 				<div class="col s12">
 					<h5>Nuevo artículo</h5>
 				</div>
-				<form id="newArticleForm" class="col s12 no-padding" method="POST" action="articles">
+				<form id="newArticleForm" class="col s12 no-padding" method="POST" action="{{route('article_categories.articles.store', $article_category->article_category_id)}}">
 					{{ csrf_field() }}
 					<div class="row" style="margin-bottom: 10px;">
 						<div class="input-field col s12 m8">
@@ -74,10 +74,10 @@
 							<label for="article_part_number" data-error="Verifique este campo" data-success="Campo validado">Número de parte del artículo</label>
 				        </div>
 				        <div class="input-field col s12 m4">
-							<input id="article_price" name="article_price" type="number" class="validate article_price" onblur="validateForm();" required>
+							<input id="article_price" name="article_price" type="number" step="any" class="validate article_price" onblur="validateForm();" required>
 							<label for="article_price" data-error="Verifique este campo" data-success="Campo validado">Precio del artículo *</label>
 				        </div>
-				        <input id="article_cateory_id" name="article_cateory_id" type="hidden" value="{{$article_category->article_category_id}}">
+				        <input id="article_cateory_id" name="article_category_id" type="hidden" value="{{$article_category->article_category_id}}">
 					</div>
 				</form>
 			</div>

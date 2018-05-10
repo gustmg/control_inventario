@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use App\RawMaterial;
 use App\RawMaterialCategory;
+use App\MeasurementUnit;
 use View;
 
 class RawMaterialController extends Controller
@@ -15,10 +17,9 @@ class RawMaterialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($category_id)
+    public function index()
     {
-        $raw_materials = RawMaterial::where('raw_material_category_id', $category_id)->get();
-        return View::make('raw_materials.index')->with('raw_materials', $raw_materials);
+
     }
 
     /**
@@ -45,7 +46,7 @@ class RawMaterialController extends Controller
         $raw_material->measurement_unit_id = $request->measurement_unit_id;
         $raw_material->save();
 
-        return Redirect::to('raw_materials');
+        return Redirect::to('raw_material_categories/'.$request->raw_material_category_id);
     }
 
     /**
@@ -56,7 +57,7 @@ class RawMaterialController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

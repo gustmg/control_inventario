@@ -158,14 +158,17 @@
     @if(Route::currentRouteName()=='raw_material_categories.index')
         <script src="{{ asset('js/raw_material_categories.js') }}"></script>
     @endif
-    @if(Route::currentRouteName()=='getArticles')
+    @if(Route::currentRouteName()=='article_categories.show')
         <script src="{{ asset('js/articles.js') }}"></script>
     @endif
+     @if(Route::currentRouteName()=='raw_material_categories.show')
+        <script src="{{ asset('js/raw_materials.js') }}"></script>
+    @endif
+
     <script type="text/javascript">
         $(document).ready(function(){
             //Init for Materialize objects
             $(".menu").sideNav();
-            $('.modal').modal();
             $('.newCompanyModal').modal({dismissible:false,});
             $('.newCompanyModal').modal('open');
             $('.carousel').carousel();

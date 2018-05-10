@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
 	<div class="row" style="margin-bottom: 0;">
@@ -34,74 +33,6 @@
 		            </div>
 				</div>
 		    </div>
-		    <div id="updateUserModal{{$user->id}}" class="modal modal-fixed-footer updateUserModal">
-		    	<div class="modal-content">
-		    		<div class="row">
-		    			<div class="col s12">
-		    				<h5 class="truncate">Editar Usuario</h5>
-		    			</div>
-		    			<form id="updateUserForm{{$user->id}}" action="users/{{$user->id}}" class="col s12 no-padding" method="POST">
-		    				{{ csrf_field() }}
-		    				@method('PUT')
-		    				<div class="row">
-		    					<div class="col s12"><b>Información general</b></div>
-		    					<div class="input-field col s5">
-		    					    <input id="first_name" type="text" class="validate" name="first_name" value="{{ $user->first_name }}" maxlength="35" required autofocus>
-		    					    <label for="first_name" data-error="Rellene este campo." data-success="Campo validado.">Nombre</label>
-		    					</div>
-		    					<div class="input-field col s7">
-		    					    <input id="last_name" type="text" class="validate" name="last_name" value="{{ $user->last_name }}" maxlength="35" required>
-		    					    <label for="last_name" data-error="Rellene este campo." data-success="Campo validado.">Apellidos</label>
-		    					</div>
-		    					<div class="input-field col s7">
-		    					    <input id="email" type="email" class="validate" name="email" value="{{ $user->email }}" maxlength="35" disabled>
-		    					</div>
-		    					<div class="input-field col s5">
-		    					    <input id="phone" type="tel" class="validate" name="phone" value="{{ $user->phone }}" pattern=".{10,10}" maxlength="10" required>
-		    					    <label for="phone" data-error="Verifique este campo." data-success="Campo validado.">Teléfono</label>
-		    					</div>
-		    				</div>
-		    				{{-- <div class="row">
-		    					<div class="col s12"><b>Cambio de contraseña</b></div>
-		    					<div class="input-field col s12">
-		    					    <input id="actual_password" type="password" class="validate" name="actual_password" pattern=".{6,}" required>
-		    					    <label for="actual_password" data-error="Verifique este campo." data-success="Campo validado.">Contraseña actual</label>
-		    					</div>
-		    					<div class="input-field col s12">
-		    						<input id="password" type="password" class="validate" name="password" pattern=".{6,}" required>
-		    					    <label for="password" data-error="Verifique este campo." data-success="Campo validado.">Contraseña nueva</label>
-		    					</div>
-		    					<div class="input-field col s12">
-		    					    <input id="password-confirm" type="password" class="validate" name="password_confirmation" pattern=".{6,}" required>
-		    					    <label for="password-confirm" data-error="Verifique este campo." data-success="Campo validado.">Confirma tu nueva contraseña</label>
-		    					</div>
-		    				</div> --}}
-		    			</form>
-		    		</div>
-		    	</div>
-		    	<div class="modal-footer">
-		    		<button class="modal-action modal-close waves-effect btn-flat"><b>Cancelar</b></button>
-		    		<button id="submit_button" onclick="submitUpdateUser({{$user->id}});" class="modal-action btn waves-effect submit_button">
-		    			<b>Editar</b>
-		    		</button>
-		    	</div>
-		    </div>
-		    <div id="deleteUserModal{{$user->id}}" class="modal deleteUserModal">
-		    	<div class="modal-content">
-		    		<h5>Eliminar usuario?</h5>
-		    	</div>
-		    	<div class="modal-footer">
-		    		<a href="#!" class="modal-action modal-close waves-effect btn-flat"><b>Cancelar</b></a>
-		    		<button id="delete_button" onclick="submitDeleteUser({{$user->id}});" class="modal-action btn-flat waves-effect"><b>Eliminar</b></button>
-		    	</div>
-		    </div>
-		    <form id="deleteUserForm{{$user->id}}" method="POST" action="users/{{$user->id}}">
-		    	{{ csrf_field() }}
-		    	@method('DELETE')
-		    </form>
 	@endforeach
 </div>
-{{-- <a href="#" style="position:fixed;bottom: 24px;right: 24px;" class="btn-floating btn-large waves-effect waves-light blue darken-3">
-	<i class="material-icons">person_add</i>
-</a> --}}
 @endsection

@@ -17,12 +17,9 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($category_id)
+    public function index()
     {
-        $articles = Article::where('article_category_id', $category_id)->get();
-        $article_category = ArticleCategory::find($category_id);
-        $measurement_units = MeasurementUnit::all();
-        return View::make('articles.index',['articles' => $articles, 'article_category' => $article_category, 'measurement_units' => $measurement_units]);
+        
     }
 
     /**
@@ -49,7 +46,7 @@ class ArticleController extends Controller
         $article->measurement_unit_id=$request->measurement_unit_id;
         $article->save();
 
-        return 'Agregado';
+        return Redirect::to('article_categories/'.$request->article_category_id);
     }
 
     /**
@@ -60,7 +57,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

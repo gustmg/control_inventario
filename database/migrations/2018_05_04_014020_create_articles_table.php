@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string('article_description')->nullable();
             $table->string('article_internal_code')->nullable();
             $table->string('article_part_number')->nullable();
-            $table->float('article_price',5,2);
+            $table->float('article_price',8,2);
             $table->integer('company_id')->unsigned();
             $table->integer('article_category_id')->unsigned();
             $table->integer('measurement_unit_id')->unsigned()->nullable();

@@ -30,8 +30,8 @@
 						<span>{{$company->company_rfc}}</span><br>
 					@endif
 				</p>
-				<a href="#modal1" class="modal-trigger btn-floating waves-effect waves-light blue darken-1 right"><i class="material-icons">edit</i></a>
-				<div id="modal1" class="modal">
+				<a href="#updateCompanyModal" class="modal-trigger btn-floating waves-effect waves-light blue darken-1 right"><i class="material-icons">edit</i></a>
+				<div id="updateCompanyModal" class="modal updateCompanyModal">
 				    <div class="modal-content">
 				    	<div class="row">
 				    		<div class="col s12">

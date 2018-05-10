@@ -39,7 +39,7 @@
 	<button style="position:fixed;bottom: 24px;right: 24px;" class="btn-floating btn-large waves-effect waves-light modal-trigger" href="#newServiceModal">
 		<i class="material-icons">add</i>
 	</button>
-	<div d="newServiceModal" class="modal newServiceModal">
+	<div id="newServiceModal" class="modal newServiceModal">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s12">
@@ -50,7 +50,7 @@
 					<div class="row" style="margin-bottom: 10px;">
 						<div class="col s12 grey-text text-darken-2"><b>Información general</b></div>
 						<div class="input-field col s12 m8">
-							<input id="service_name" name="service_name" type="text" class="validate service_name" onblur="validateForm();" required>
+							<input id="service_name" name="service_name" type="text" class="validate service_name" onkeyup="validateForm();" onblur="validateForm();" required>
 							<label for="service_name" data-error="Verifique este campo" data-success="Campo validado">Nombre del servicio *</label>
 				        </div>
 				        <div class="input-field col s12 m12">
@@ -62,7 +62,7 @@
 							<label for="service_internal_code" data-error="Verifique este campo" data-success="Campo validado">Código interno del servicio</label>
 				        </div>
 				        <div class="input-field col s12 m6">
-							<input id="service_price" name="service_price" type="number" class="service_price validate" onblur="validateForm();" required>
+							<input id="service_price" name="service_price" type="number" class="service_price validate" onkeyup="validateForm();" onblur="validateForm();" required>
 							<label for="service_price" data-error="Verifique este campo" data-success="Campo validado">Costo del servicio</label>
 				        </div>
 					</div>
