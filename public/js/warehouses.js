@@ -1,10 +1,18 @@
-$('.newWarehouseModal').modal();
-$('.updateWarehouseModal').modal();
+$('.newWarehouseModal').modal({
+	complete: function () {
+		document.getElementById("newWarehouseForm").reset();
+	},
+});
+$('.updateWarehouseModal').modal({
+	complete: function () {
+		$(".updateWarehouseForm").trigger('reset');
+	},
+});
 $('.deleteWarehouseModal').modal();
 
 function validateForm(){
-	if (!$('.warehouse_name').hasClass('invalid')
-		&& !$('.warehouse_address').hasClass('invalid')) {
+	if ($('.warehouse_name').hasClass('valid')
+		&& $('.warehouse_address').hasClass('valid')) {
 		$('.submit_button').attr('disabled', false);
 	} else {
 		$('.submit_button').attr('disabled', true);

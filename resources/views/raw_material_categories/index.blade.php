@@ -24,13 +24,38 @@
 								<a href="#deleteRawMaterialCategorModal{{$raw_material_category->raw_material_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Eliminar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">delete</i>
 								</a>
-								<a href="#" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Editar categoría">
+								<a href="#updateRawMaterialCategoryModal{{$raw_material_category->raw_material_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Editar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">edit</i>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div id="updateRawMaterialCategoryModal{{$raw_material_category->raw_material_category_id}}" class="modal updateRawMaterialCategoryModal">
+					<div class="modal-content">
+						<div class="row">
+							<div class="col s12">
+								<h5>Nueva categoría de materias primas</h5>
+							</div>
+							<form id="updateRawMaterialCategoryForm{{$raw_material_category->raw_material_category_id}}" class="col s12 no-padding updateRawMaterialCategoryForm" method="POST" action="raw_material_categories/{{$raw_material_category->raw_material_category_id}}">
+								{{csrf_field()}}
+								@method('PUT')
+								<div class="row" style="margin-bottom: 10px;">
+									<div class="col s12 grey-text text-darken-2"><b>Información general</b></div>
+									<div class="input-field col s12">
+										<input id="raw_material_category_name" name="raw_material_category_name" type="text" class="validate raw_material_category_name" value="{{$raw_material_category->raw_material_category_name}}" onblur="validateForm();" required>
+										<label for="raw_material_category_name" data-error="Verifique este campo" data-success="Campo validado">Nombre de la categoría *</label>
+							        </div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="modal-action modal-close waves-effect btn-flat"><b>Cancelar</b></button>
+						<button id="submit_button" onclick="submitUpdateRawMaterialCategory({{$raw_material_category->raw_material_category_id}});" class="modal-action btn waves-effect submit_button" disabled><b>Editar</b></button>
+					</div>
+				</div>
+
 				<div id="deleteRawMaterialCategorModal{{$raw_material_category->raw_material_category_id}}" class="modal deleteRawMaterialCategoryModal">
 					<div class="modal-content">
 						<h5>Eliminar categoría?</h5>

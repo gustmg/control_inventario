@@ -27,8 +27,8 @@
 						<tbody>
 							<tr>
 								<td class="center">{{$service->service_internal_code}}</td>
-								<td class="truncate tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$service->service_name}}">{{$service->service_name}}</td>
-								<td class="center tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$service->service_description}}">{{$service->service_description}}</td>
+								<td class="truncate tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$service->service_description}}">{{$service->service_name}}</td>
+								<td class="center">{{$service->service_price}}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -63,7 +63,7 @@
 				        </div>
 				        <div class="input-field col s12 m6">
 							<input id="service_price" name="service_price" type="number" class="service_price validate" onkeyup="validateForm();" onblur="validateForm();" required>
-							<label for="service_price" data-error="Verifique este campo" data-success="Campo validado">Costo del servicio</label>
+							<label for="service_price" data-error="Verifique este campo" data-success="Campo validado">Costo del servicio *</label>
 				        </div>
 					</div>
 				</form>

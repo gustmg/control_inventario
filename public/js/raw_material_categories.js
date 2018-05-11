@@ -1,5 +1,14 @@
-$('.newRawMaterialCategoryModal').modal();
-$('.updateRawMaterialCategoryModal').modal();
+$('.newRawMaterialCategoryModal').modal({
+	complete: function () {
+		document.getElementById("newRawMaterialCategoryForm").reset();
+		$('.submit_button').attr('disabled', true);
+	},
+});
+$('.updateRawMaterialCategoryModal').modal({
+	complete: function () {
+		$(".updateRawMaterialCategoryForm").trigger('reset');
+	},
+});
 $('.deleteRawMaterialCategoryModal').modal();
 
 function validateForm(){

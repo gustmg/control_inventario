@@ -1,5 +1,14 @@
-$('.newArticleCategoryModal').modal();
-$('.updateArticleCategoryModal').modal();
+$('.newArticleCategoryModal').modal({
+	complete: function () {
+		document.getElementById("newArticleCategoryForm").reset();
+		$('.submit_button').attr('disabled', true);
+	},
+});
+$('.updateArticleCategoryModal').modal({
+	complete: function () {
+		$(".updateArticleCategoryForm").trigger('reset');
+	},
+});
 $('.deleteArticleCategoryModal').modal();
 
 function validateForm(){

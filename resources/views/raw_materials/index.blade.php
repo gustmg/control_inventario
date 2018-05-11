@@ -20,16 +20,19 @@
 					<thead class="grey darken-4 white-text">
 						<tr>
 							<th style="width: 20%;" class="center">Código Interno</th>
-							<th style="width: 30%;" class="center">Artículo</th>
-							<th style="width: 50%;" class="center">Precio</th>
+							<th style="width: 60%;" class="center">Artículo</th>
+							<th style="width: 20%;" class="center">Precio</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach($raw_materials as $key=>$raw_material)
-						<tr>
+						<tr style="cursor: pointer;">
 							<td class="center">{{$raw_material->raw_material_internal_code}}</td>
-							<td class="truncate tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$raw_material->raw_material_description}}">{{$raw_material->raw_material_name}}</td>
-							<td class="center tooltipped" data-position="bottom" data-delay="600" data-tooltip="{{$raw_material->raw_material_price}}">{{$raw_material->raw_material_price}}</td>
+							<td class="truncate">
+								<span class="title"><b>{{$raw_material->raw_material_name}}</b> <b class="grey-text">({{$raw_material->raw_material_part_number}})</b></span><br>
+								<span class="grey-text">{{$raw_material->raw_material_description}}</span>
+							</td>
+							<td class="center">$ {{$raw_material->raw_material_price}}</td>
 						</tr>
 						@endforeach
 					</tbody>

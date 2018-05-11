@@ -24,11 +24,35 @@
 								<a href="#deleteArticleCategorModal{{$article_category->article_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Eliminar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">delete</i>
 								</a>
-								<a href="#" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Editar categoría">
+								<a href="#updateArticleCategoryModal{{ $article_category->article_category_id}}" class="modal-trigger btn-floating white z-depth-0 tooltipped" data-position="bottom" data-delay="100" data-tooltip="Editar categoría">
 									<i class="material-icons black-text" style="opacity: .6;">edit</i>
 								</a>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div id="updateArticleCategoryModal{{ $article_category->article_category_id}}" class="modal updateArticleCategoryModal">
+					<div class="modal-content">
+						<div class="row">
+							<div class="col s12">
+								<h5>Editar categoría de artículos</h5>
+							</div>
+							<form id="updateArticleCategoryForm{{ $article_category->article_category_id}}" class="col s12 no-padding updateArticleCategoryForm" method="POST" action="article_categories/{{ $article_category->article_category_id}}">
+								{{ csrf_field() }}
+								@method('PUT')
+								<div class="row" style="margin-bottom: 10px;">
+									<div class="col s12 grey-text text-darken-2"><b>Información general</b></div>
+									<div class="input-field col s12">
+										<input id="article_category_name" name="article_category_name" type="text" class="validate article_category_name" onblur="validateForm();" value="{{ $article_category->article_category_name}}" required>
+										<label for="article_category_name" data-error="Verifique este campo" data-success="Campo validado">Nombre de la categoría *</label>
+							        </div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect btn-flat"><b>Cancelar</b></a>
+						<button id="submit_button" onclick="submitUpdateArticleCategory({{ $article_category->article_category_id}});" class="modal-action btn waves-effect submit_button" disabled><b>Editar</b></button>
 					</div>
 				</div>
 				<div id="deleteArticleCategorModal{{$article_category->article_category_id}}" class="modal deleteArticleCategoryModal">

@@ -38,8 +38,8 @@
 				    			<h4>Editar Empresa</h4>
 				    		</div>
 				    		<form id="updateCompanyForm" class="col s12 no-padding" method="POST" action="company/1">
-				    			@method('PUT')
 				    		    {{ csrf_field() }}
+				    			@method('PUT')
 				    		    <div class="row" style="margin-bottom: 10px;">
 				    		        <div class="col s12 grey-text text-darken-2"><b>Información general</b></div>
 				    		        <div class="input-field col s12 m7">

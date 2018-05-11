@@ -1,5 +1,14 @@
-$('.newRawMaterialModal').modal();
-$('.updateRawMaterialModal').modal();
+$('.newRawMaterialModal').modal({
+	complete: function () {
+		document.getElementById("newRawMaterialForm").reset();
+		$('.submit_button').attr('disabled', true);
+	},
+});
+$('.updateRawMaterialModal').modal({
+	complete: function () {
+		$(".updateRawMaterialForm").trigger('reset');
+	},
+});
 $('.deleteRawMaterialModal').modal();
 $('select').material_select();
 

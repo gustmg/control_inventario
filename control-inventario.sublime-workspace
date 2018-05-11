@@ -519,6 +519,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/raw_materials/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 4954,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -609,44 +618,51 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Laravel/control_inventario"
+		"/C/Laravel/control_inventario",
+		"/C/Laravel/control_inventario/public",
+		"/C/Laravel/control_inventario/public/js",
+		"/C/Laravel/control_inventario/resources",
+		"/C/Laravel/control_inventario/resources/views",
+		"/C/Laravel/control_inventario/resources/views/raw_materials",
+		"/C/Laravel/control_inventario/resources/views/warehouses"
 	],
 	"file_history":
 	[
-		"/C/Laravel/control_inventario/resources/views/raw_materials/index.blade.php",
-		"/C/Laravel/control_inventario/resources/views/layouts/app.blade.php",
 		"/C/Laravel/control_inventario/public/js/raw_materials.js",
-		"/C/Laravel/control_inventario/public/js/articles.js",
-		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleCategoryController.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialCategoryController.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialController.php",
-		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleController.php",
-		"/C/Laravel/control_inventario/app/RawMaterialCategory.php",
 		"/C/Laravel/control_inventario/resources/views/articles/index.blade.php",
-		"/C/Laravel/control_inventario/routes/web.php",
-		"/C/Laravel/control_inventario/resources/views/raw_material_categories/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/article_categories.js",
+		"/C/Laravel/control_inventario/public/js/articles.js",
+		"/C/Laravel/control_inventario/resources/views/raw_materials/index.blade.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialCategoryController.php",
 		"/C/Laravel/control_inventario/resources/views/article_categories/index.blade.php",
-		"/C/Laravel/control_inventario/public/js/services.js",
-		"/C/Laravel/control_inventario/resources/views/services/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/raw_material_categories/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/raw_material_categories.js",
+		"/C/Laravel/control_inventario/app/RawMaterialCategory.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleCategoryController.php",
+		"/C/Laravel/control_inventario/app/RawMaterial.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/ArticleController.php",
 		"/C/Laravel/control_inventario/resources/views/branch_offices/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/services/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/services.js",
+		"/C/Laravel/control_inventario/public/js/branch_offices.js",
+		"/C/Laravel/control_inventario/resources/views/warehouses/index.blade.php",
+		"/C/Laravel/control_inventario/public/js/warehouses.js",
 		"/C/Laravel/control_inventario/resources/views/company/index.blade.php",
+		"/C/Laravel/control_inventario/resources/views/layouts/app.blade.php",
+		"/C/Laravel/control_inventario/app/Http/Controllers/RawMaterialController.php",
+		"/C/Laravel/control_inventario/routes/web.php",
 		"/C/Laravel/control_inventario/public/js/company.js",
 		"/C/Laravel/control_inventario/resources/views/users/index.blade.php",
 		"/C/Laravel/control_inventario/public/js/users.js",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_014020_create_articles_table.php",
 		"/C/Laravel/polizer/public/js/accounting_accounts.js",
-		"/C/Laravel/control_inventario/public/js/branch_offices.js",
 		"/C/Laravel/polizer/app/Http/Controllers/ProviderController.php",
 		"/C/Laravel/polizer/resources/views/providers/index.blade.php",
-		"/C/Laravel/control_inventario/public/js/article_categories.js",
-		"/C/Laravel/control_inventario/public/js/raw_material_categories.js",
 		"/C/Laravel/control_inventario/app/Http/Controllers/ServiceController.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_021748_create_services_table.php",
 		"/C/Laravel/polizer/resources/views/accounting_accounts/index.blade.php",
-		"/C/Laravel/control_inventario/resources/views/warehouses/index.blade.php",
 		"/C/Laravel/control_inventario/app/Http/Controllers/WarehouseController.php",
 		"/C/Laravel/control_inventario/app/Http/Controllers/BranchOfficeController.php",
-		"/C/Laravel/control_inventario/public/js/warehouses.js",
 		"/C/Laravel/control_inventario/app/Warehouse.php",
 		"/C/Laravel/control_inventario/database/migrations/2018_05_04_013852_create_branch_offices_table.php",
 		"/C/Laravel/control_inventario/resources/views/auth/register.blade.php",
@@ -678,7 +694,6 @@
 		"/C/Laravel/control_inventario/app/Company.php",
 		"/C/Laravel/control_inventario/app/MeasurementUnit.php",
 		"/C/Laravel/control_inventario/app/Provider.php",
-		"/C/Laravel/control_inventario/app/RawMaterial.php",
 		"/C/Laravel/control_inventario/app/Service.php",
 		"/C/Laravel/control_inventario/app/WarehouseEntry.php",
 		"/C/Laravel/control_inventario/app/WarehouseExit.php",
@@ -759,6 +774,9 @@
 		"find_history":
 		[
 			"article",
+			"modal-fixed-footer",
+			"form",
+			"article",
 			"Article",
 			"article",
 			"l artículo",
@@ -809,6 +827,8 @@
 		"replace_history":
 		[
 			"raw_material",
+			"",
+			"raw_material",
 			"RawMaterial",
 			"raw_material",
 			" raw_material",
@@ -844,8 +864,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/raw_materials/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1634,
+								1634
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

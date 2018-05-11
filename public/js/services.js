@@ -1,9 +1,14 @@
 $('.newServiceModal').modal({
 	complete: function () {
 		document.getElementById("newServiceForm").reset();
+		$('.submit_button').attr('disabled', true);
 	},
 });
-$('.updateServiceModal').modal();
+$('.updateServiceModal').modal({
+	complete: function () {
+		$(".updateServiceForm").trigger('reset');
+	},
+});
 $('.deleteServiceModal').modal();
 
 function validateForm(){

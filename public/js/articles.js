@@ -1,5 +1,14 @@
-$('.newArticleModal').modal();
-$('.updateArticleModal').modal();
+$('.newArticleModal').modal({
+	complete: function () {
+		document.getElementById("newArticleForm").reset();
+		$('.submit_button').attr('disabled', true);
+	},
+});
+$('.updateArticleModal').modal({
+	complete: function () {
+		$(".updateArticleForm").trigger('reset');
+	},
+});
 $('.deleteArticleModal').modal();
 $('select').material_select();
 
